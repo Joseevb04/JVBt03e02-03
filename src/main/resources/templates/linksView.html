@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<th:block th:insert="~{/fragments/headFragment.html}" />
+		<link rel="stylesheet" th:href="@{/style/links-style.css}" />
+		<title>Enlaces</title>
+	</head>
+	<body>
+		<nav th:replace="~{/fragments/navFragment.html}"></nav>
+		<main>
+			<h1>Enlaces Útiles sobre Metallica</h1>
+			<section class="links">
+				<ul>
+					<li>
+						<a
+							th:href="@{https://www.metallica.com/}"
+							target="_blank"
+							>Sitio Oficial de Metallica</a
+						>
+						<p>
+							Mantente actualizado con las últimas noticias,
+							fechas de giras y productos.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.metallica.com/discography}"
+							target="_blank"
+							>Discografía de Metallica</a
+						>
+						<p>
+							Explora la discografía completa de Metallica,
+							incluyendo álbumes, sencillos y EPs.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://es.wikipedia.org/wiki/Metallica}"
+							target="_blank"
+							>Página de Wikipedia de Metallica</a
+						>
+						<p>
+							Encuentra una visión general completa de la
+							historia, álbumes y miembros de la banda.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.setlist.fm/setlist/metallica/}"
+							target="_blank"
+							>Setlist.fm: Setlists de Metallica</a
+						>
+						<p>
+							Consulta las listas de canciones de conciertos
+							pasados y próximos.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.metallica.com/community}"
+							target="_blank"
+							>Comunidad de Metallica</a
+						>
+						<p>
+							Únete a la comunidad de fans de Metallica y
+							conéctate con otros aficionados.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.youtube.com/user/Metallica}"
+							target="_blank"
+							>Canal de YouTube de Metallica</a
+						>
+						<p>
+							Mira videos musicales oficiales, actuaciones en vivo
+							y más.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.roadrunnerrecords.com/artists/metallica}"
+							target="_blank"
+							>Roadrunner Records: Metallica</a
+						>
+						<p>
+							Descubre noticias e información de la discográfica
+							de Metallica.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.facebook.com/Metallica}"
+							target="_blank"
+							>Metallica en Facebook</a
+						>
+						<p>
+							Sigue a Metallica en Facebook para actualizaciones e
+							interacción con los fans.
+						</p>
+					</li>
+					<li>
+						<a
+							th:href="@{https://www.instagram.com/metallica/}"
+							target="_blank"
+							>Metallica en Instagram</a
+						>
+						<p>Mira fotos e historias de la banda en Instagram.</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer th:replace="~{/fragments/footerfragment.html}" />
+	</body>
+</html>

@@ -1,0 +1,43 @@
+:root {
+	--gap-size: 1rem;
+	--border-radius: 0.5rem;
+	--shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+	--scale: 0.05;
+}
+
+.image-gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap-size);
+	margin: 2rem 0;
+}
+
+.image-gallery img {
+	width: 100%;
+	height: auto;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+	transform: scale(1 + var(--scale));
+}
+
+@media (max-width: 80rem) {
+	.image-gallery {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 50rem) {
+	.image-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 31.25rem) {
+	.image-gallery {
+		grid-template-columns: 1fr;
+	}
+}

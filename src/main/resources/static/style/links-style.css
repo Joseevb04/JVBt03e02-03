@@ -1,0 +1,23 @@
+.links {
+	margin: 2rem 0;
+}
+
+.links ul {
+	list-style: none;
+	padding: 0;
+}
+
+.links li {
+	margin-bottom: 1rem;
+}
+
+.links a {
+	color: var(--fc-accent);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.links a:hover {
+	text-decoration: underline;
+	color: black; /* Change color on hover */
+}

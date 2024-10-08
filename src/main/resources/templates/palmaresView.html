@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:insert="~{/fragments/headFragment.html}" />
+		<link rel="stylesheet" th:href="@{/style/table-style.css}" />
+		<title>Palmares</title>
+	</head>
+	<body>
+		<nav th:replace="~{/fragments/navFragment.html}" />
+		<main>
+			<h1>Premios</h1>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Año</th>
+						<th>Premio</th>
+						<th>Notas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Thymeleaf loop to display each award -->
+					<tr th:each="premio : ${palmares}">
+						<td th:text="${premio.year}">Year</td>
+						<td th:text="${premio.name}">Premio</td>
+						<td th:text="${premio.notes}">Notas</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<footer th:replace="~{/fragments/footerfragment.html}" />
+	</body>
+</html>

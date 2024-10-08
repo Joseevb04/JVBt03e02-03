@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<th:block th:insert="~{/fragments/headFragment.html}" />
+		<link rel="stylesheet" th:href="@{/style/galery-style.css}" />
+		<title>Galeria</title>
+	</head>
+	<body>
+		<nav th:replace="~{/fragments/navFragment.html}" />
+		<main>
+			<h1>Galeria</h1>
+			<div class="image-gallery">
+				<img th:src="@{/img/OIP.jpg}" alt="OIP" />
+				<img th:src="@{/img/METALLICA.jpg}" alt="Metallica" />
+				<img
+					th:src="@{/img/Metallica_Live_at_The_O2,_London,_England,_22_October_2017.jpg}"
+					alt="Metallica Live at The O2, London"
+				/>
+				<img th:src="@{/img/R.jpg}" alt="R" />
+				<img
+					th:src="@{/img/Metallica_wordmark.svg.png}"
+					alt="Metallica Wordmark"
+				/>
+			</div>
+		</main>
+		<footer th:replace="~{/fragments/footerfragment.html}" />
+	</body>
+</html>
