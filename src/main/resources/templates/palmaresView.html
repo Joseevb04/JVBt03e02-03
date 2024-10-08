@@ -19,15 +19,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<!-- Thymeleaf loop to display each award -->
 					<tr th:each="premio : ${palmares}">
-						<td th:text="${premio.year}">Year</td>
-						<td th:text="${premio.name}">Premio</td>
-						<td th:text="${premio.notes}">Notas</td>
+						<td th:text="${premio.year}?:'N/A'">Year</td>
+						<td th:text="${premio.award}">Premio</td>
+						<td th:text="${premio.note}">Notas</td>
 					</tr>
 				</tbody>
 			</table>
 		</main>
-		<footer th:replace="~{/fragments/footerfragment.html}" />
+		<footer th:replace="~{/fragments/footerFragment.html}" />
 	</body>
 </html>
