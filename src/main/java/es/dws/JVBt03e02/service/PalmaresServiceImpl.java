@@ -8,6 +8,8 @@ import es.dws.JVBt03e02.model.Palmares;
 
 /**
  * PalmaresServiceImpl
+ * Placeholder para la implementacion de obtener la informacion de la base de datos
+ * Devuelve una {@code List<>} de objetos {@code Palmares}
  */
 @Service
 public class PalmaresServiceImpl implements PalmaresService {

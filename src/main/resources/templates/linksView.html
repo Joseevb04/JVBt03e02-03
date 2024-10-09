@@ -1,115 +1,136 @@
 <!doctype html>
 <html lang="es">
 	<head>
-		<th:block th:insert="~{/fragments/headFragment.html}" />
-		<link rel="stylesheet" th:href="@{/style/links-style.css}" />
+		<th:block th:insert="~{/fragments/fragments.html :: head}" />
 		<title>Enlaces</title>
+		<link
+			rel="stylesheet"
+			th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+		/>
 	</head>
 	<body>
-		<nav th:replace="~{/fragments/navFragment.html}" />
-		<main>
-			<h1>Enlaces Útiles sobre Metallica</h1>
+		<nav th:replace="~{/fragments/fragments.html :: main-nav}" />
+
+		<main class="container mt-5">
+			<h1 class="text-center mb-4">Enlaces Útiles sobre Metallica</h1>
 			<section class="links">
-				<ul>
-					<li>
+				<ul class="list-group">
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.metallica.com/}"
 							target="_blank"
+							class="link-primary"
 							>Sitio Oficial de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Mantente actualizado con las últimas noticias,
 							fechas de giras y productos.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.metallica.com/discography}"
 							target="_blank"
+							class="link-primary"
 							>Discografía de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Explora la discografía completa de Metallica,
 							incluyendo álbumes, sencillos y EPs.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://es.wikipedia.org/wiki/Metallica}"
 							target="_blank"
+							class="link-primary"
 							>Página de Wikipedia de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Encuentra una visión general completa de la
 							historia, álbumes y miembros de la banda.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.setlist.fm/setlist/metallica/}"
 							target="_blank"
+							class="link-primary"
 							>Setlist.fm: Setlists de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Consulta las listas de canciones de conciertos
 							pasados y próximos.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.metallica.com/community}"
 							target="_blank"
+							class="link-primary"
 							>Comunidad de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Únete a la comunidad de fans de Metallica y
 							conéctate con otros aficionados.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.youtube.com/user/Metallica}"
 							target="_blank"
+							class="link-primary"
 							>Canal de YouTube de Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Mira videos musicales oficiales, actuaciones en vivo
 							y más.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.roadrunnerrecords.com/artists/metallica}"
 							target="_blank"
+							class="link-primary"
 							>Roadrunner Records: Metallica</a
 						>
-						<p>
+						<p class="mt-2">
 							Descubre noticias e información de la discográfica
 							de Metallica.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.facebook.com/Metallica}"
 							target="_blank"
+							class="link-primary"
 							>Metallica en Facebook</a
 						>
-						<p>
+						<p class="mt-2">
 							Sigue a Metallica en Facebook para actualizaciones e
 							interacción con los fans.
 						</p>
 					</li>
-					<li>
+					<li class="list-group-item">
 						<a
 							th:href="@{https://www.instagram.com/metallica/}"
 							target="_blank"
+							class="link-primary"
 							>Metallica en Instagram</a
 						>
-						<p>Mira fotos e historias de la banda en Instagram.</p>
+						<p class="mt-2">
+							Mira fotos e historias de la banda en Instagram.
+						</p>
 					</li>
 				</ul>
 			</section>
 		</main>
-		<footer th:replace="~{/fragments/footerFragment.html}" />
+
+		<footer th:replace="~{/fragments/fragments.html :: main-footer}" />
+
+		<script
+			src="/webjars/bootstrap/js/bootstrap.bundle.min.js"
+			defer
+		></script>
 	</body>
 </html>

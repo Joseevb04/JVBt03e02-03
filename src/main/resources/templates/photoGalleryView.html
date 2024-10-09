@@ -1,28 +1,62 @@
 <!doctype html>
 <html lang="es">
 	<head>
-		<th:block th:insert="~{/fragments/headFragment.html}" />
-		<link rel="stylesheet" th:href="@{/style/galery-style.css}" />
+		<th:block th:insert="~{/fragments/fragments.html :: head}" />
 		<title>Galeria</title>
+		<link
+			rel="stylesheet"
+			th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+		/>
 	</head>
 	<body>
-		<nav th:replace="~{/fragments/navFragment.html}" />
-		<main>
-			<h1>Galeria</h1>
-			<div class="image-gallery">
-				<img th:src="@{/img/OIP.jpg}" alt="OIP" />
-				<img th:src="@{/img/METALLICA.jpg}" alt="Metallica" />
-				<img
-					th:src="@{/img/Metallica_Live_at_The_O2,_London,_England,_22_October_2017.jpg}"
-					alt="Metallica Live at The O2, London"
-				/>
-				<img th:src="@{/img/R.jpg}" alt="R" />
-				<img
-					th:src="@{/img/Metallica_wordmark.svg.png}"
-					alt="Metallica Wordmark"
-				/>
+		<nav th:replace="~{/fragments/fragments.html :: main-nav}" />
+
+		<main class="container mt-5">
+			<h1 class="text-center mb-4">Galería</h1>
+			<div class="row">
+				<div class="col-6 col-md-4 mb-4">
+					<img
+						th:src="@{/img/OIP.jpg}"
+						alt="OIP"
+						class="img-fluid rounded"
+					/>
+				</div>
+				<div class="col-6 col-md-4 mb-4">
+					<img
+						th:src="@{/img/METALLICA.jpg}"
+						alt="Metallica"
+						class="img-fluid rounded"
+					/>
+				</div>
+				<div class="col-6 col-md-4 mb-4">
+					<img
+						th:src="@{/img/Metallica_Live_at_The_O2,_London,_England,_22_October_2017.jpg}"
+						alt="Metallica Live at The O2, London"
+						class="img-fluid rounded"
+					/>
+				</div>
+				<div class="col-6 col-md-4 mb-4">
+					<img
+						th:src="@{/img/R.jpg}"
+						alt="R"
+						class="img-fluid rounded"
+					/>
+				</div>
+				<div class="col-6 col-md-4 mb-4">
+					<img
+						th:src="@{/img/Metallica_wordmark.svg.png}"
+						alt="Metallica Wordmark"
+						class="img-fluid rounded"
+					/>
+				</div>
 			</div>
 		</main>
-		<footer th:replace="~{/fragments/footerFragment.html}" />
+
+		<footer th:replace="~{/fragments/fragments.html :: main-footer}" />
+
+		<script
+			src="/webjars/bootstrap/js/bootstrap.bundle.min.js"
+			defer
+		></script>
 	</body>
 </html>

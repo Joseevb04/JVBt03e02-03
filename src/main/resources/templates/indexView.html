@@ -1,17 +1,25 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<th:block th:insert="~{/fragments/headFragment.html}" />
-		<link rel="stylesheet" th:href="@{/style/home-style.css}" />
+		<th:block th:insert="~{/fragments/fragments.html :: head}" />
 		<title>Home</title>
 	</head>
 	<body>
-		<nav th:replace="~{/fragments/navFragment.html}" />
-		<main>
-			<h1>Metallica</h1>
-			<article>
-				<img th:src="@{/img/Metallica_wordmark.svg.png}" alt="" />
-				<h2>Descripción</h2>
+		<nav th:replace="~{/fragments/fragments.html :: main-nav}" />
+		<main class="container my-5">
+			<header>
+				<h1 class="text-center text-dark my-4">Metallica</h1>
+				<p th:text="${user}"></p>
+			</header>
+			<article class="bg-white rounded shadow p-4 mb-4">
+				<figure class="d-flex justify-content-center mb-3">
+					<img
+						th:src="@{/img/Metallica_wordmark.svg.png}"
+						alt="Metallica Logo"
+						class="img-fluid"
+					/>
+				</figure>
+				<h2 class="text-dark mt-4">Descripción</h2>
 				<p>
 					Metallica es una banda estadounidense de heavy metal,
 					fundada en 1981 en Los Ángeles, aunque ha estado radicada en
@@ -21,9 +29,9 @@
 					Kirk Hammet, y el bajista Robert Trujillo. Metallica es
 					considerada como una de las bandas comercialmente más
 					exitosas de todos los tiempos, habiendo vendido más de 125
-					millones de álbumes en todo el mundo
+					millones de álbumes en todo el mundo.
 				</p>
-				<h2>Historia</h2>
+				<h2 class="text-dark mt-4">Historia</h2>
 				<p>
 					Fue fundada en 1981 en Los Ángeles por Ulrich y Hetfield, a
 					los que se les unirían Ron McGovney y Dave Mustaine. En
@@ -38,6 +46,10 @@
 				</p>
 			</article>
 		</main>
-		<footer th:replace="~{/fragments/footerFragment.html}" />
+		<footer th:replace="~{/fragments/fragments.html :: main-footer}" />
+		<script
+			src="/webjars/bootstrap/js/bootstrap.bundle.min.js"
+			defer
+		></script>
 	</body>
 </html>

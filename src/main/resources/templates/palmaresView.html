@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<th:block th:insert="~{/fragments/headFragment.html}" />
-		<link rel="stylesheet" th:href="@{/style/table-style.css}" />
+		<th:block th:insert="~{/fragments/fragments.html :: head}" />
 		<title>Palmares</title>
 	</head>
 	<body>
-		<nav th:replace="~{/fragments/navFragment.html}" />
-		<main>
-			<h1>Premios</h1>
+		<nav th:replace="~{/fragments/fragments.html :: main-nav}" />
+		<main class="container mt-5">
+			<h1 class="text-center mb-4">Premios</h1>
 
-			<table>
-				<thead>
+			<table class="table table-striped table-bordered table-rounded">
+				<thead class="thead-dark">
 					<tr>
 						<th>Año</th>
 						<th>Premio</th>
@@ -20,13 +19,17 @@
 				</thead>
 				<tbody>
 					<tr th:each="premio : ${palmares}">
-						<td th:text="${premio.year}?:'N/A'">Year</td>
+						<td th:text="${premio.year} ?: 'N/A'">Year</td>
 						<td th:text="${premio.award}">Premio</td>
 						<td th:text="${premio.note}">Notas</td>
 					</tr>
 				</tbody>
 			</table>
 		</main>
-		<footer th:replace="~{/fragments/footerFragment.html}" />
+		<footer th:replace="~{/fragments/fragments.html :: main-footer}" />
+		<script
+			src="/webjars/bootstrap/js/bootstrap.bundle.min.js"
+			defer
+		></script>
 	</body>
 </html>
