@@ -51,4 +51,9 @@ public class MainController {
         return "photoGalleryView";
     }
 
+    @GetMapping("/enlaces")
+    public String showLinks(Model model) {
+        model.addAttribute("year", LocalDate.now().getYear());
+        return "linksView";
+    }
 }
